@@ -26,9 +26,9 @@ interface ProductDetailsProps {
 }
 
 const ProductDetails = ({ product }: ProductDetailsProps) => {
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
-    const {toggleCart} = useContext(CartContext)
+    const {toggleCart, addProduct} = useContext(CartContext)
     
     const handleDecreaseQuantity = () => {
         setQuantity(prev => {
@@ -45,10 +45,15 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
 
     const handleAddToCart = () => {
         toggleCart(
-          
         )
+        addProduct( {
+            ...product,
+            quantity
+        })
     }
+
    
+    
     return (
      <>
         <div className="relative z-50 rounded-t-3xl py-5 mt-[-1.5rem] p-5 overflow-hidden flex-auto flex flex-col">

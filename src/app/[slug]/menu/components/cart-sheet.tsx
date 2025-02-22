@@ -5,13 +5,16 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { CartContext } from "../contexts/cart";
 
 const CartSheet = () => {
-    const {isOpen, toggleCart} = useContext(CartContext);
+    const {isOpen, toggleCart, products} = useContext(CartContext);
     return (
     <Sheet open={isOpen} onOpenChange={toggleCart}>
         <SheetContent>
             <SheetHeader>
-                <SheetTitle>Teste</SheetTitle>
+                <SheetTitle>{products.length}</SheetTitle>
             </SheetHeader>
+            {products.map(product => (
+                <h1 key={product.id}>{product.name} - {product.quantity}</h1>
+            ))}
         </SheetContent>
     </Sheet>);
 }
