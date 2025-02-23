@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Product } from "@prisma/client";
 import { ChevronLeftIcon, ScrollTextIcon } from "lucide-react";
@@ -8,18 +8,16 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 interface ProductHeaderProps {
-    product: Pick<Product, 'name' | 'imageUrl'>
+  product: Pick<Product, "name" | "imageUrl">;
 }
 
-const ProductHeader = ({product}: ProductHeaderProps) => {
-
- const router = useRouter();
+const ProductHeader = ({ product }: ProductHeaderProps) => {
+  const router = useRouter();
 
   const handleBackClick = () => router.back();
 
-    return (  
-
-        <div className="relative min-h-[300px] h-[250px] w-full">
+  return (
+    <div className="relative h-[250px] min-h-[300px] w-full">
       <Button
         variant="secondary"
         size="icon"
@@ -42,7 +40,7 @@ const ProductHeader = ({product}: ProductHeaderProps) => {
         className="object-contain"
       />
     </div>
-    );
-}
- 
+  );
+};
+
 export default ProductHeader;
