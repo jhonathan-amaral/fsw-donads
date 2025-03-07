@@ -15,6 +15,7 @@ const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => {
   const router = useRouter();
 
   const handleBackClick = () => router.back();
+  const handleOrderProducts = () => router.push("/fsw-donalds/orders?cpf");
 
   return (
     <div className="relative h-[250px] w-full">
@@ -30,6 +31,7 @@ const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => {
         variant="secondary"
         size="icon"
         className="absolute right-4 top-4 z-50 rounded-full"
+        onClick={handleOrderProducts}
       >
         <ScrollTextIcon />
       </Button>

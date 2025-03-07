@@ -14,7 +14,6 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
 } from "@/components/ui/drawer";
 import {
   Form,
@@ -55,7 +54,6 @@ const CpfForm = () => {
 
   return (
     <Drawer open>
-      <DrawerTrigger>Open</DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Visualizar Pedidos</DrawerTitle>
