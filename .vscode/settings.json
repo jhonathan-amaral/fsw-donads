@@ -3,7 +3,9 @@
     "categorie",
     "datasource",
     "donalds",
-    "sonner"
+    "Shadcn",
+    "sonner",
+    "vscodeignore"
   ],
   "editor.wordWrap": "on"
 }
